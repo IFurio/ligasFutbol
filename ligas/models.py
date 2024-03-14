@@ -2,9 +2,6 @@ from django.db import models
 
 class Lliga(models.Model):
     nom = models.CharField(max_length=100)
-    pais = models.CharField(max_length=100)
-    temporada = models.CharField(max_length=100)
-
     def __str__(self):
         return self.nom
 
@@ -12,7 +9,7 @@ class Equip(models.Model):
     nom = models.CharField(max_length=100)
     pais = models.CharField(max_length=100)
     ciutat = models.CharField(max_length=100)
-    lligues = models.ManyToManyField('Lliga', related_name='equips')
+    lligues = models.ManyToManyField(Lliga)
 
     def __str__(self):
         return self.nom

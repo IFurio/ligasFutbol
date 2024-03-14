@@ -3,5 +3,8 @@ from django.urls import path, include
 from ligas import views
 
 urlpatterns = [
-    path("classificacio", views.classificacio)
+    path("createequip", views.createequip, name="createequip"),
+    path("createlliga", views.createlliga, name="createlliga"),
+    path("menu", views.menu, name="menu"),
+    path("classificacio/<int:lliga_id>", views.classificacio, name="classificacio")
 ]
