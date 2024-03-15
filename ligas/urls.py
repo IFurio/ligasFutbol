@@ -6,5 +6,6 @@ urlpatterns = [
     path("createequip", views.createequip, name="createequip"),
     path("createlliga", views.createlliga, name="createlliga"),
     path("menu", views.menu, name="menu"),
-    path("classificacio/<int:lliga_id>", views.classificacio, name="classificacio")
+    path("classificacio/<int:lliga_id>", views.classificacio, name="classificacio"),
+    path("edita_equip", views.edita_equip, name="edita_equip"),
 ]

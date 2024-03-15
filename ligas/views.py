@@ -9,6 +9,10 @@ def index(request):
     return render(request, "index.html")
 
 
+def edita_equip(request):
+    return render(request, "edita_equip_ajax.html")
+
+
 def nombre_equipo_existe(nombre):
     return Equip.objects.filter(nom__iexact=nombre).exists()
 

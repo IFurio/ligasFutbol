@@ -16,11 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
 import ligas
+from ligas import api
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('lliga/', include('ligas.urls')),
-    path('', ligas.views.index)
+    path('', ligas.views.index),
+    path('api/get_lligues', ligas.api.get_lligues, name='get_lligues')
 ]
