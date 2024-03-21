@@ -3,8 +3,15 @@ from django.http import HttpResponse
 from django import forms
 from django.shortcuts import redirect
 from ligas.models import *
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
+@login_required
+def profile(request):
+    user = request.user
+    return HttpResponse("Profile: " + user.username + "<br> Nom "+ user.first_name + "<br> Cognom " + user.last_name + "<br> Email " + user.email)
+
+
 def index(request):
     return render(request, "index.html")
 

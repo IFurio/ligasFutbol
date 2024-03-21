@@ -8,4 +8,5 @@ urlpatterns = [
     path("menu", views.menu, name="menu"),
     path("classificacio/<int:lliga_id>", views.classificacio, name="classificacio"),
     path("edita_equip", views.edita_equip, name="edita_equip"),
+    path("profile/", views.profile),
 ]
